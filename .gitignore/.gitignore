@@ -1,0 +1,480 @@
+
+      \documentclass[a4paper, 12pt]{article}
+\usepackage{geometry}
+	\geometry{a4paper, margin=1in}
+\usepackage[demo]{graphicx}
+\usepackage{float}
+\usepackage{url}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{amsmath}
+
+
+
+\begin{document}
+	
+	\title{Characterization and study of Image quality of 3.6m Devasthal Optical Telescope}
+	\author{Jinku Das}
+	\maketitle
+	\tableofcontents
+	\vspace*{\fill} 
+	\noindent
+	\pagebreak
+
+	\section*{Abstract}
+		Image quality is one of the fundamental requirements to study any astronomical observation. This project aims to determine image quality of 3.6m telescope using images taken from CCD cameras mounted at Cassegrain ports and investigate the factors which affect this important performance parameter of optical telescope. The image quality is affected mainly due to various aberrations in which air turbulence is one of most significance. With this report an effort has been made to study the effect of air turbulence i.e the speckle photometry in the degradation of image quality of 3.6m optical telescope, Devasthal, of the images of on-axis sources taken through observation and to observe, by theoretical means, the deviation from a perfect(Gaussian) Airy Disk due to the presence of air.      
+
+	\section{Introduction}
+		When obsereved with an optical telescope, the quality of an image is affected due to a number of factors that includes the functional design of the telescope, atmospheric turbulence, various aberrations due to off-axis sources. The study of these factors and thus an attempt to eleminate them is what would lead to a desired qulity of an image.
+       
+ 
+		   \subsection{Fundamental design of a telescope}
+			  Most of the large reflecting telescopes are composed of conic surfaces (paraboloids, ellipsoids, hyperboloids) formed by rotating conic sections about their axes of symmetry. In the realm of optics, the fundamental property of conics is that the normal at a given point on any conic bisects the angle formed by the two radii joining that point to the two foci. This means that all optical rays issuing from a source located at one of the foci will converge at the other focus and thus form a perfect image of the source. This perfect imaging of a point source is called “stigmatism.” The simplest case is that of the parabola, which is a degenerated ellipse with one of its foci at infinity. Rays issuing from this focus at infinity, that is to say, rays parallel to the parabola axis, will, after reflection, converge at the parabola focus.
+                 
+                 The next case uses a second conic surface with one of its focci coincident with the focus of the parabola. This second conic surface will reimage the
+original source at its second focus, again in a perfectly stigmatic way. When this second conic is an ellipsoid, the system is called a“Gregorian,” and when it is a hyperboloid, it is a “Cassegrain”.
+
+The scale of the image at the focal plane is generally expressed in arcseconds on the sky per millimeter or microns on the image. It is proportional to 1/f and, using meters for f and micrometers as units on the image, is given by 
+               
+               Plate scale = 0.206/f  arcsecond per $\mu$m.
+					
+			
+			
+
+		    \subsection{About DOT}
+			   The 3.6m Devasthal Optical Telescope (DOT) is an alt-azimuth, $Ritchey-Cr\acute{e}tien$ type telescope, given in the figure below. The 'Main Port' sits at FPA axial. There are two FPA-side, holding the two 'Side Ports'. The images for this project  have been obtained from a CCD imager mounted at Main Port. It uses a Cassegrain System.
+
+			\begin{figure}[H]
+				\centering
+				\includegraphics[width=5cm]{optic_diagram.png}
+				\caption{\emph{Optical diagram for the telescope featuring hyperbolic primary and secondary mirrors(Cassegrain System). The focal length with the corrector is 32795.8mm. Image adapted from telescope manuals.}}
+			\end{figure}
+
+	\section{Requirements of Fundamental of Optics}
+		Before proceeding to study the image formation of a telescope, it is necessary to know the fundamentals of optics that plays a necessary role in the design of any optical telescope and thus leading to the image quality of the telescope. 
+		
+			In optical telescope design, three basic requirements are high angular resolution,large light collecting power, and large field of view. Among these, angular resolution contributes the most in the quality of an image.
+			The angular resolution of an optical telescope is its ability to resolve two closely located point objects. Three factors influence the angular resolution of a tele-
+scope. These are diffraction of the aperture, aberrations of the optical system, and atmospheric turbulence.
+            In Gaussian optics, light from a single point object will arrive at a single point in the image space. The form of Gaussian optics known as paraxial or first-order optics is the first approximation of a practical optical system. In Gaussian optics, the sine of an angle is replaced by the angle itself. There is no aberration in a Gaussian system. The term of aberration in optics describes the geometrical difference between
+a practical image and the corresponding Gaussian image. If the third order aberrations (first few terms of the aberration) are included, the second approximation of a practical optical system is referred to as classical optics where only third power terms of the aberrations are considered. Geometrical optics is the third approximation for a practical optical system, where all the aberration terms are included. Geometrical optics does not fully describe a practical optical system which is influenced by the wave features of light. One important property of light is interference. By including the wave effect, the fourth approximation of a practical optical system is referred to as physical optics. Physical optics includes diffraction, interference, and aberrations in a practical optical system. For optical telescope design, this stage of approximation is generally adequate.
+		
+		
+
+	\section{Image Formation}
+		The best way to characterize the imaging capability of an optical system is by
+examining the image it forms of a point source. This is relevant for astronomical instruments since, for all practical purposes, stars are point sources. As for extended objects, they can be considered to the first order as a collection of point sources.
+
+
+
+		    \subsection{Diffraction Effects}
+			      When we want to about an ideal quality of an image, we refer the geometrical optics of first order due to a point source where no aberrations can be seen. However, because of the wave nature of light, even a perfect optical system will not image a point source as a true point, but rather as a bright spot surrounded by faint concentric rings. This is caused by “diffraction,” which is a spreading of light as it passes the edge of an opaque body. In a telescope, this happens at the edge of the aperture and at any obstacle within the aperture such as the secondary mirror and its supporting vanes. 
+                   For example, if we consider a point source at infinity, the image produced by a perfect system is a bright disk surrounded by alternating dark and bright rings, the intensity of which falls as the inverse cube of the distance from the center of the image. A linear obstruction such as that of a secondary support vane will produce a spike in the image of a point source in a direction perpendicular to the vane and with a total intensity that is proportional to the area of the obstruction relative to the aperture area.
+                   In addition to the diffraction effects created by the aperture, two other factors contribute to the diffractive degradation of the geometric image:
+
+   – Dust on the mirror surfaces scatters incoming light and creates a faint halo around the image. Dust particles are typically several tens of microns across and hence lead to very wide-angle diffractive scattering (on the order of degrees).
+
+   – Mirror surface defects of high spatial frequencies such as those due to roughness of the optical surface or a periodic pattern on the surface related to the internal structure of the mirrors. These defects also create a faint halo with an angular size determined by the spatial frequency of the defects.
+		
+		
+		     \subsection{Point Spread Function (PSF)}
+		          The distribution of light intensity in the image of a point source is called the “point spread function” (PSF). Treating light as a wave allows for a complete mathematical description of the PSF. The distribution of light intensity in the image of a point source is a function of the shape of the aperture and obstructions, geometrical aberrations, and diffraction effects due to dust and defects on the optics surface. These factors can be incorporated into a single concept, the “complex pupil function” defined as:	
+                  $P(r, \varphi)e^{i k W(r,\varphi)}$
+
+		where 
+               $k = \frac{\pi}{\lambda}2$ is the wave number for light with wavelength $\lambda$, $W(r,\varphi)$ is the wavefront error, and $P(r,\varphi)$ is the transmittance of the aperture, which is equal to 1 for the parts of the aperture that are completely unobscured and to 0 for obscured regions.        		
+		       
+		          \subsubsection{PSF of a system with perfect optics}
+		   
+		            
+	                  In the simple case of a perfect optical system (no aberrations, perfect surfaces, no dust) with an unobstructed circular aperture and monochromatic light, the PSF can be determined analytically and is given by
+	                  
+	                  \begin{equation}
+	                  I= C{\frac{J_1(x)}{x}}^2
+	                  \end{equation}
+	                  
+	      where where $I$ is the intensity of light in the image, $C$ is a constant = $\frac{1}{1-(\epsilon)^{2}}$, $J_1$ is the first-order Bessel function, and $x = \frac{\pi}{\lambda}\theta D$, with $D$ being the diameter of the aperture, $\theta$ the angular coordinate of the image spread, and $\lambda$ the wavelength. This is the well-known “Airy function” named after George Airy who first derived this mathematical formulation. The shape and main characteristics of the Airy pattern are shown in Fig.2, and the energy concentration in the image is plotted on the left in Fig.3.
+                      In a traditional Cassegrain telescope (DOT), the aperture is obstructed at the center by the secondary mirror. The point spread function of the resulting annulus is            
+	                  \begin{equation}
+	                  I= C{(\frac{J_1(x)}{x})-(\epsilon)^{2}(\frac{J_1(x\epsilon)}{x\epsilon})}^{2}
+	                  \end{equation}	                                
+	                  
+	         where $\epsilon$ is the obscuration ratio of the telescope expressed as the ratio of the diameter of the central obstruction to that of the aperture. Here for 3.6m DOT, $\epsilon$ = 0.98m.  
+	         
+	         
+	                 	        
+	                  
+	                  
+	              \begin{figure}[H]
+				\centering
+				\includegraphics[width=6cm]{Airy pattern1.png}
+				\caption{\emph{The Airy pattern, the PSF given by a perfect telescope with a circular aperture.}}
+			      \end{figure}
+			      
+			      
+			       \begin{figure}[H]
+				\centering
+				\includegraphics[width=6cm]{Airy pattern2.png}
+				\caption{\emph{The cross section of the Airy pattern (PSF) with the indication of the first and second rings and the circle with a diameter equal to $\frac{\lambda}{D}$, $D$ being the diameter of the aperture(for DOT $D$=3.6m) and $\lambda$, the wavelength.}}
+			      \end{figure}                
+			
+		       	          		       
+		       
+		       
+	\section{Aberrations}
+		    Generally speaking, aberrations in an image are the result of an optical system failing to produce an exact point-to-point correspondence between the source
+and its image. There are five primary aberrations: spherical aberration, coma, astigmatism, field curvature, and distortion. The last four are generally off-axis aberrations, whereas spherical aberration affects image quality even on axis. Another type of aberration, chromatic aberration, is not present in reflecting systems since the law of reflection, unlike that of refraction, is independent of wavelength.
+                         
+            The primary aberrations are discussed in detail as follows: 
+
+      
+          \subsection{Spherical aberration}       
+             Spherical aberration is due to the fact that rays issuing from a source at
+infinity on axis do not all converge at the same point. The focus of the marginal rays (those at the periphery) is different from the focus of the paraxial rays (those close to the axis). “Refocusing” (e.g., by displacing the detector in the image space) will not help: there is no single focus. This effect is independent of the field angle and inversely proportional to $N^{3}$. The term “spherical aberration” is employed because it is the aberration exhibited by a spherical mirror imaging a source at infinity. This aberration is eliminated by using a paraboloid. In two-mirror systems, spherical aberration is due to the fact that the mirrors do not have matching conic constants. This is the condition that affected the Hubble Space Telescope upon launch, and most
+existing large ground-based telescopes display the same problem to some degree. This aberration is difficult to avoid completely in large telescopes because the primary and secondary mirrors are seldom tested as a system in the optical shop, as the collimators required to simulate a source at infinity are costly and difficult to make. The two mirrors are therefore generally tested individually against some reference, with the result that test errors can lead to an imperfect match.
+  
+  
+           \subsection{Coma}
+              Coma is due to the fact that rays issuing from an off-axis source do not converge at the same point in the focal plane. This creates a blur which resembles a comet, hence the name. It is the dominant aberration in classical Cassegrain systems used off-axis. In this case, the coma aberration is field dependent and increases linearly with the off axis angle. Fast (small f -ratio) mirrors are much more affected because the effect scales as the inverse of the square of the f -ratio. Coma can also appear when the secondary mirror axis is not exactly coaxial with the primary mirror axis. In such a case, this additional coma is “field independent”: it has the same amplitude throughout the field. 
+    
+    
+            \subsection{Astigmatism}
+               Astigmatism originates from the fact that the focus of rays in the plane
+containing the axis of the system and an off-axis source (the tangential plane) is different from the focus of rays in the perpendicular plane (sagittal plane). Astigmatism scales as the square of the field angle and is inversely proportional to the f -ratio.
+
+            \subsection{Field curvature}
+               Field curvature occurs when the image does not form on a “plane,” but on a curved surface. In the absence of astigmatism, the image would be formed on a curved surface called the “Petzval surface,” with a sag that scales like astigmatism.
+      
+      
+             \subsection{Distortion}
+                Distortion originates in the fact that the plate scale (scale in the image plane) is not perfectly constant but varies both with the field angle and the direction. In general, the effect is not of great importance because it can be calibrated out (i.e., measured and removed from the actual two-dimensional data). Distortion scales as the cube of the field angle.
+    
+    
+
+
+
+
+
+     \section{Atmospheric Turbulence}
+          The atmosphere is never totally calm. Wind and convection induce turbulence
+which can mix layers with slightly different refraction indexes, causing changes in the direction of the light passing through. As a result, the amount of light reaching the aperture of a telescope varies constantly, both in intensity and direction. This phenomenon is referred to as “seeing.”
+                   The index of refraction of air depends on its density, which is proportionally much more affected by the temperature fluctuations likely to occur in the free atmosphere or near a telescope than by the aerodynamic pressure variations associated with wind. Thus, “seeing” is strongly dependent on temperature fluctuations but negligibly on wind effects. Such temperature fluctuations result from turbulent mixing of air layers at different temperatures caused by natural convection or mechanical turbulence. Convection is essentially limited to the ground layer and to the troposphere below the inversion layer, but mechanical turbulence exists throughout the lower and upper atmosphere. Mechanical turbulence is most pronounced in the weakly stratified troposphere, especially in the regions of high wind shear just above and below the jet streams. The stratosphere, the layer above the troposphere, is, as its name implies, much more stratified and is generally very stable. The effect of turbulence on optical distortion naturally decreases with the index of refraction of air, which is proportional to density, which itself is proportional to pressure and inversely proportional to absolute temperature.     
+
+               
+        The “Fried length,” also called “Fried parameter” or “coherence length,” is a statistical parameter which permits a simple characterization of seeing. Simply stated, $r_{0}$ is the diameter of the bundle of rays issuing from a source at infinity which travel together through the various turbulent atmospheric layers and arrive, still parallel and in phase, at the telescope entrance. A telescope with an aperture equal to $r_{0}$ would primarily suffer from image motion (as the tilt of the ray bundle changes), but not much from image blur. To reach diffraction-limited performance, that is to say the imaging performance of a quasi-perfect system limited only by diffraction, $r_{0}$ must be somewhat larger than the telescope diameter, about 1.6 times. Then, with an adequate guiding system to remove wavefront tilt, the telescope would essentially be free of atmospheric turbulence effects, as if it were in space. For a telescope with an aperture which is large compared to $r_{0}$, the full width at half-maximum (FWHM) of the image is given by 
+
+                       FWHM = $\frac{\lambda}{r_{0}}0.98$
+
+where $\lambda$ is the wavelength. However, $r_{0}$ is itself a function of $\lambda$ with ${r_{0}} \propto {\lambda^{6/5}}$, so that seeing varies as $\lambda^{{-}1/5}$ and is thus most pronounced at the lower end of the optical range. In the visible, $r_{0}$ varies from a typical value of $10 cm$ to $30 cm$ at the best sites, which results in seeing of$1{\prime}{\prime}$ to$0.35{\prime}{\prime}$ , respectively. Under the same conditions, seeing would be between $0.75{\prime}{\prime}$ and $0.25{\prime}{\prime}$ in the near infrared at around 2 $\mu$m.       
+
+
+
+   In general, seeing will degrade an image in two ways: image motion and image blur. At any one time, the apparent direction of an observed object is determined by the average direction of the wavefront entering the telescope. Small-aperture telescopes experience greater image motion than larger telescopes because wavefront distortions tend to have larger slope changes over small scales (Fig.4). The reverse is true for image blur: larger telescopes suffer from a larger image spread than smaller ones.
+
+
+
+
+                \begin{figure}[H]
+				\centering
+				\includegraphics[width=8cm]{air turb1.png}
+				\caption{\emph{Image motion decreases as telescope size increases, whereas the reverse is true for image blur.}}
+			      \end{figure}
+			      
+			      
+			      
+			      \begin{figure}[H]
+				\centering
+				\includegraphics[width=7cm]{Speckle.png}
+				\caption{\emph{Speckles.}}
+			      \end{figure}
+
+
+     \section{Criteria for image quality}
+           The imaging performance of an optical system is fully characterized by its PSF, but it is a two-dimensional function which can be very complex, depending on diffraction effects and instrumental effects. When comparing telescope concepts or defining specifications for design and fabrication purposes, one needs a practical metric. Many attempts have been made to characterize the PSF with simple functions and even a single number. Those most commonly used and taken into account and studied in this project are described below.
+           
+             \subsection{“80% encircled energy” (EE)}
+                  This is the angular diameter containing $80%$ of the energy in the PSF. In the PSF given by a perfect optical system (no aberrations, no atmosphere) having a circular pupil with no central obscuration, $80%$ of the energy is contained in a diameter of ∼ 1.8λ/D. This criterion, which is meant to represent the practical angular size of the image of a point source, is an excellent measure of the performance of a large telescope because it directly relates to the two main astronomically meaningful parameters: sensitivity and angular resolution. It is wavelength dependent, however, and must be set for the prime wavelength for which the observatory is intended, or else several values corresponding to various wavelengths must be supplied.               
+              
+              \subsection{Full width at half-maximum (FWHM)}
+                  This is the width (average diameter) of the PSF at half the maximum intensity. The FWHM is a good measure of the image size, although not as telling as the $80%$ EE because it does not include the wings of the PSF.
+
+
+
+       \section{Results and Practical Implements}
+          So far introduced and mentioned above in details are the parameters related to and their effects on the image quality of  3.6m DOT. The tasks that have been completed and discussed thoroughly in this project are given as follows.
+          
+              \subsection{Airy Disk Pattern for D=3.6m}
+                   The objective was to find out and study the variation of intensity with the angular coordinate of the image spread formed by neglecting the effect of air turbulence using the formula for PSF intensity distribution with an central obstruction of 0.98m(as in the case of 3.6m DOT). 
+                   
+                   
+                      \begin{equation}
+	                  I= C{(\frac{J_1(x)}{x})-(\epsilon)^{2}(\frac{J_1(x\epsilon)}{x\epsilon})}^{2}
+	                  \end{equation}	                                
+	                  
+	         where $\epsilon$=0.98m is the obscuration ratio of the telescope expressed as the ratio of the diameter of the central obstruction to that of the aperture and 
+$x = \frac{\pi}{\lambda}\theta D$, $C$ is a constant = $\frac{1}{1-(\epsilon)^{2}}$.
+
+Here $\theta$ is the angular coordinate of the image spread and is taken in the range of 0-2 arcseconds,$\lambda$ =500nm. The data that was calculated using the above mentioned formula and it's parameters are given below along with the intensity distribution pattern (Airy Disk). As seen from the figure below that the distribution can be approximated with that of a Gaussian Profile and thus from here FWHM can be found out and it is approximately ~0.35 arcsec.
+
+
+                 
+
+                             \begin{center}
+                              \begin{tabular}{|| c | c ||} 
+                              \hline
+                               θ(arcsec) & I \\ [0.5ex] 
+                              \hline\hline
+                               0.0 & 0.030    \\ 
+                              \hline
+ 							   0.2 & 0.024     \\
+ 							  \hline
+ 							   0.4 & 0.013267   \\
+ 							   \hline
+ 								0.6 & 0.00699     \\
+ 							   \hline
+ 							    0.8 & 0.00274     \\ 
+ 								\hline
+ 								1.0 & 0.0005562    \\
+								 \hline
+ 								1.2 & 0.0000006961 \\
+ 								\hline
+ 								1.4 & 0.0002271    \\
+ 								 \hline
+ 								1.6 & 0.000496     \\
+ 								 \hline
+ 								1.8 & 0.0005148    \\
+ 								 \hline
+ 								2.0 & 0.000314     \\ [1ex] 
+ 								 \hline
+								 \end{tabular}
+								 \end{center}
+
+
+	                          \begin{figure}[H]
+				               \centering
+				           \includegraphics[width=5cm]{Airy Disk(D=3.6m).png}
+				
+			                 \end{figure}                
+			                  
+                  
+                            
+                  \subsection{Airy Disk Pattern for r0=10cm}
+                   Here the variation of intensity with the angular coordinate of the image spread formed is found out and studied by taking into consideration of the effect of air(Atmospheric) turbulence using the formula for PSF intensity distribution with an central obstruction of 0.98m(as in the case of 3.6m DOT). In this case, the Airy disk or PSF is formed due to a number of  air speckles of size 10cm that can be imagined to accumulate on the aperture of telescope. The interesting fact about speckle interferometry is that these tiny speckles appear and vanish in a certain time limit of nano seconds and are solely responsible for so called the diffraction effect of the light coming from the distant stars. As a result the intensity of the PSF increases as whole .    
+                   
+                   
+                      \begin{equation}
+	                  I= C{(\frac{J_1(x)}{x})-(\epsilon)^{2}(\frac{J_1(x\epsilon}{x\epsilon})}^{2}
+	                  \end{equation}	                                
+	                  
+	         where $\epsilon$=0.98m is the obscuration ratio of the telescope expressed as the ratio of the diameter of the central obstruction to that of the aperture and 
+$x = \frac{\pi}{\lambda}\theta D$, $C$ is a constant = $\frac{1}{1-(\epsilon)^{2}}$.
+
+Here $\theta$ is the angular coordinate of the image spread and is taken in the range of 0-2 arcseconds, $\lambda$=500nm. The data that was calculated using the above mentioned formula and it's parameters are given below along with the intensity distribution pattern (Airy Disk). Similarly, in this figure below that the distribution can be approximated with that of a Gaussian Profile and thus from here FWHM can be found out and it is approximately ~0.4 arcsec, which is slightly greater than the previous case and it is due to the presence of the air turbulence.
+
+
+
+                         \begin{figure}[H]
+				\centering
+				\includegraphics[width=7cm]{Speckle.png}
+				\caption{\emph{Speckles}}
+			      \end{figure}
+
+                          
+                          
+                             \begin{center}
+                              \begin{tabular}{|| c | c ||} 
+                              \hline
+                               θ(arcsec) & I \\ [0.5ex] 
+                              \hline\hline
+ 							   0.2 & 0.8198    \\
+ 							  \hline
+ 							   0.4 & 0.4222  \\
+ 							   \hline
+ 								0.6 & 0.09155    \\
+ 							   \hline
+ 							    0.8 & 0.0021     \\ 
+ 								\hline
+ 								1.0 & 0.08687    \\
+								 \hline
+ 								1.2 & 0.05989 \\
+ 								\hline
+ 								1.4 & 0.01251   \\
+ 								 \hline
+ 								1.6 & 0.0332    \\
+ 								 \hline
+ 								1.8 & 0.000536    \\
+ 								 \hline
+ 								2.0 & 0.0423     \\ [1ex] 
+ 								 \hline
+								 \end{tabular}
+								 \end{center}
+
+
+	                          \begin{figure}[H]
+				               \centering
+				           \includegraphics[width=5cm]{Airy Disk(r0=3.6m).png}
+				
+			                 \end{figure} 
+			                 
+			                 
+			                 
+			     \subsection{Encircle Energy Plot}
+			         The Encircled Energy(EE) Plot for both PSF (with and without air turbulence) are established and $80%$ EE in both cases are calculated. One of the main criteria for an optimal image quality is to find out $80%$ EE along with FWHM of an Airy disk and by menifasting the idea of these one can determine the quality of an image depending on the very effect of atmospheric turbulence and other aberrations. $80%$ EE can be considered as the area in which $80%$ of photons coming from distant source is accumulated.  
+			         
+			         
+			                            
+                            \begin{center}
+                              \begin{tabular}{|| c | c ||}
+                              \hline 
+                               Without Air Turbulence \\                              
+                              \hline
+                               θ(arcsec) & Counts \\ [0.5ex] 
+                              \hline\hline
+                                0.0 & 0.0000  \\
+                               \hline         
+                                0.08& 0.8256  \\
+                               \hline
+                                0.1 & 0.8534  \\               
+                               \hline
+                                0.2 & 0.8811  \\
+ 							  \hline
+ 							    0.4 & 0.9141  \\
+ 							   \hline
+ 								0.6 & 0.9254   \\
+ 							   \hline
+ 							    0.8 & 0.9316   \\ 
+ 								\hline
+ 								1.0 & 0.9477   \\
+								 \hline
+ 								1.2 & 0.9521   \\
+ 								\hline
+ 								1.4 & 0.9622  \\
+ 								 \hline
+ 								1.6 & 0.9625   \\
+ 								 \hline
+ 								1.8 & 0.9736    \\
+ 								 \hline
+ 								2.0 & 0.9800   \\ [1ex] 
+ 								 \hline
+								 \end{tabular}
+								 \end{center}
+
+
+                               
+                               
+                               \begin{center}
+                              \begin{tabular}{|| c | c ||}
+                              \hline 
+                               With Air Turbulence \\                              
+                              \hline
+                               θ(arcsec) & Counts \\ [0.5ex] 
+                              \hline\hline
+                                0.0 & 0.0000  \\
+                               \hline         
+                                0.2 & 0.7919  \\
+ 							  \hline
+ 							    0.4 & 0.8045  \\
+ 							   \hline
+ 								0.6 & 0.8087   \\
+ 							   \hline
+ 							    0.8 & 0.8199   \\ 
+ 								\hline
+ 								1.0 & 0.8264   \\
+								 \hline
+ 								1.2 & 0.8385   \\
+ 								\hline
+ 								1.4 & 0.8664  \\
+ 								 \hline
+ 								1.6 & 0.8904   \\
+ 								 \hline
+ 								1.8 & 0.9104    \\
+ 								 \hline
+ 								2.0 & 0.9523   \\ [1ex] 
+ 								 \hline
+								 \end{tabular}
+								 \end{center}
+	                          
+	                          
+	                          
+	                         \begin{figure}[H]
+				               \centering
+				           \includegraphics[width=5cm]{Encircled_energy_plot.png}
+				
+			                 \end{figure} 
+			                 
+             As seen from the figure that $80%$ encircled radius for both cases are:
+             With air ~0.65 arcsec(approx.)
+             Without air ~0.2 arcsec(approx.)
+             Hence due to the presence of air turbulence for which intensity tends  to increase leads to more amount of accumulation of the photons which is in proportion to more area(0.65 arcsec). 
+
+
+
+                 \subsection{PSF Photometry}
+                    Here the task was find out the FWHM of the various images taken over the Night observation log for 2015-12-07/08 using IRAF(Image Reduction and Analysis Facility) language for different elevations of 31, 40, 60, 61, 62 and 87.5 m(as tabulated below) and to compare the FWHM values for different images with those of Airy Disk with D=3.6m and $r_{0}$=10cm. 
+                    
+                    \begin{enumerate}
+                    \item \textbf{Observation Details include}:
+                    
+           3.6m DOT: Night observation log for 2015-12-07/08
+           Observing program: PSF test at Cassegrain Main-port for different elevations
+           
+           
+           Observation summary:
+
+                Instrument: 768x512 pix camera (ML402ME) with 9 micron pixel.
+                Pixel scale: 0.05768 arc sec/pixel
+                Filter: H-alpha narrow band
+                Region: 256x256 pix (~ 15 x 15 arc sec)
+                Port: Main-port
+                Rotator enabled
+                Targets: six bright stars from Hipparchus Catalog (On-axis sources),
+                Exposure time: 20s, 30s, 40s; total 23 frames
+                Start of test UT: 07/12/2015 15h36
+                End of test UT: 17h53                    
+                Test conditions:
+                Wind speed: less than 1 m/s
+                Air temperature: 10°C
+                M1 temperature: 12°C
+                Humidity: $50%$ Blowers
+                
+                
+                
+                      
+                               \begin{center}
+                              \begin{tabular}{|| c | c | c | c | c ||}
+                              \hline 
+                               FWHM(in arcseconds)\\                              
+                              \hline
+                               Elevation & S0 & S1 & S2 & S3 & S4 \\ [0.5ex] 
+                              \hline\hline
+                                31 &    & 1.3427 & 1.4264 & 1.3687 &  \\
+                               \hline         
+                                40 &    & 1.5746 & 1.4368 & 1.6709 & \\
+ 							  \hline
+ 							    60 & 0.91019 & 0.9719 & 0.8029 & 0.85827 & 0.95806 \\
+ 							   \hline
+ 								61 & 1.2712  & 1.3595 & 1.3791 & 1.3393  &  \\
+ 							   \hline
+ 							    62 & 0.80809 & 1.03189 & 1.0042 & 1.0872 &  \\ 
+ 								\hline
+ 								87.5 & 0.86635 & 0.91538 & 0.90788 & 0.9794 & \\
+								 \hline  [1ex] 
+								 \end{tabular}
+								 \end{center}
+	                          
+	                              
+                    \end{enumerate}
+                    
+
+
+	\section{Conclusion}
+		This report comprehensively covers the study of image quality of 3.6m DOT under the effects of atmospheric turbulence. The images taken over Night observation log for 2015-12-07/08 are from the on-axis sources and thus the case for aberrations due to the off-axis sources have not been considered. It has been thoroughly analysed the degradation of the quality of image solely due to turbulence and it is quite fascinating to know that by considering the case of turbulence only, it's quality can change drastically. Even though the case of aberrations is not taken into account, it is expected that this report is enough in determinig establish the image quality of a telescope. 
+
+	\section{Acknowledgements}
+	  I would like to express my gratitude towards Dr. Brijesh Kumar (ARIES, Nainital) who provided constant support \& guidance during the fellowship.
+\bibliographystyle{ieeepes}
+\bibliography{resources}
+\end{document}
